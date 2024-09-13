@@ -1,28 +1,40 @@
-# ECE650 : Final Project
+# Vertex-Cover-Algorithm-for-Optimal-Security-Camera-Placement
 
-Replace FIRST_NAME, LAST_NAME, WATIAM, and STUDENT_ID, EMAIL in
-`user.yml` by your first and last name, WatIAM id, student number, and
-email, respectively. The information must be entered for all members
-of your team. Whenever possible, please use ASCII characters.
+## Project Objective
 
-Do not change the format `user.yml`. We will parse it
-automatically. Only enter the information requested.
+The primary objective of this project is to significantly enhance security measures at local traffic intersections by strategically deploying security camera installations. 
 
-The main executable file for your solution to the assignment should be
-`ece650-prj`.
+## Vertex Cover Problem
 
-Do not include MiniSat in your repository. We will clone it in your
-repository using the command. This is exactly the same as was done in
-Assignment 4.
+In graph theory, a **vertex cover** is a subset \( U \) of vertices in a graph \( G = (V, E) \) such that for every edge \( (u, v) \) in \( E \), at least one of the vertices \( u \) or \( v \) (or both) is included in \( U \).
 
-```
-git clone https://git.uwaterloo.ca/ece650-f23/minisat.git
-```
+## Approach
 
-Note that for the project you have to create a `CMakeLists.txt` on
-your own. You can use examples from previous assignments or from
-course examples on Gitlab.
+This project explores various algorithms specifically designed to address the Vertex Cover problem. Our approach involves:
 
-Do not forget to include your report in `report.pdf`
+1. **Encoding Vertex Cover Instances:** We encode vertex cover instances into CNF-SAT clauses within the given graph. This process is facilitated by the use of MiniSat.
+2. **Approximation Algorithms:** We apply two distinct approximation algorithms:
+   - **Approx-VC-1**
+   - **Approx-VC-2**
+   Both algorithms are instrumental in accurately calculating the vertex cover.
 
-Commit your changes and submit on GitLab.
+## Runtime Assessment
+
+To evaluate the runtime of our algorithms, we use the `pthread_getcpuclockid()` utility, which provides precise CPU execution time measurements for each algorithm thread.
+
+## Additional Details
+
+- The `CMakeLists.txt` file has been edited.
+- Execute the file `ece650-prj.cpp` to run the project.
+- A1, A2, A3, and A4 are integral components of this project, each contributing to the final outcome. All components are interrelated.
+
+## How to Run
+
+1. Ensure that the `CMakeLists.txt` file is properly configured.
+2. Compile the project and run the `ece650-prj.cpp` file.
+
+## Dependencies
+
+- [MiniSat](http://minisat.se/)
+- C++ Compiler
+- CMake
